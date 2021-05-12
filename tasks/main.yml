@@ -17,7 +17,7 @@
     - ocp_cluster_kubeconfig is defined and ocp_cluster_kubeconfig != ""
   block:
     - name: Ensure the kubeconfig file exist on the controller
-      stats:
+      stat:
         path: "{{ ocp_cluster_kubeconfig }}"
       register: kubeconfig_exists
 
